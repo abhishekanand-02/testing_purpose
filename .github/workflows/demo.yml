@@ -46,7 +46,7 @@ jobs:
 
     steps:
       - name: Print Deployment Message
-        run: echo "Deployment Step: Code is successfully tested and ready for deployment."
+        run: echo "Code is successfully tested and ready for deployment."
 
 # -------------------------------
 # Previous Version (Commented Out)
