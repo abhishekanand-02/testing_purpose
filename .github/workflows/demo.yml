@@ -37,3 +37,56 @@ jobs:
 
       - name: Run Tests
         run: python -m unittest discover tests
+
+
+
+# name: CI/CD Pipeline 
+
+# on:
+#   push:
+#     branches:
+#       - main
+#       - testing_new_branch
+#     paths-ignore:
+#       - 'README.md'  
+#   pull_request:
+#     branches:
+#       - main
+#     paths-ignore:
+#       - 'README.md'  
+
+# jobs:
+#   continuous_integration:
+#     name: Continuous Integration  # Naming the CI job
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout Repository
+#         uses: actions/checkout@v4
+
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.10'
+
+#       - name: Install Dependencies
+#         run: |
+#           if [ -f requirements.txt ]; then
+#             echo "Installing dependencies..."
+#             python -m pip install --upgrade pip
+#             pip install -r requirements.txt
+#           else
+#             echo "No requirements.txt found. Skipping dependency installation."
+#           fi
+
+#       - name: Run Tests
+#         run: python -m unittest discover tests
+
+#   continuous_delivery:
+#     name: Continuous Delivery  # Naming the CD job
+#     runs-on: ubuntu-latest
+#     needs: continuous_integration  # CD runs ONLY after CI completes successfully
+
+#     steps:
+#       - name: Print Deployment Message
+        # run: echo "Code is successfully tested and ready for deployment."
